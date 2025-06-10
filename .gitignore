@@ -1,0 +1,16 @@
+# Node.js
+node_modules/
+.env
+dist/
+
+# Logs
+npm-debug.log*
+
+# Sistema
+.DS_Store
+
+# Python/Django (por si hay scripts más adelante)
+__pycache__/
+*.pyc
+venv/
+
