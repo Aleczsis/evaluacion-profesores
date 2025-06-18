@@ -1,0 +1,81 @@
+.main-bienvenida {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+/* Contenedor principal que centra el contenido de bienvenida en la pantalla */
+.bienvenida-container {
+  display: flex; /* Usa flexbox para alinear contenido */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  height: 100%; /* Usar 100% del espacio disponible, no 70vh */
+  padding: 10px; /* Espaciado interior */
+  background-color: white; /* Fondo blanco para mantener limpieza visual */
+}
+
+/* Caja blanca que contiene el título, subtítulo y botones */
+.bienvenida-box {
+  background-color: #efefef; /* Fondo blanco */
+  padding: 30px 40px; /* Espacio interior (vertical y horizontal) */
+  box-shadow: 0 4px 12px rgb(103, 125, 255); /* Sombra suave para resaltar el contenedor */
+  text-align: center; /* Centra el texto */
+  width: 80%; /* Ancho flexible */
+  max-width: 600px; /* Ancho máximo */
+  border-radius: 8px; /* Bordes redondeados */
+}
+
+/* Estilo del título principal */
+.titulo-principal {
+  color: #5a5757; /* Color vino */
+  margin-bottom: 0.6rem; /* Espacio debajo del título */
+  font-weight: bold; /* Texto en negrita */
+  font-size: 30px; /* Tamaño grande */
+  font-family: 'Roboto'; /* Fuente Roboto, con sans-serif como respaldo */
+}
+
+/* Estilo del subtítulo */
+.subtitulo {
+  color: #0e0e0e; /* Color vino */
+  margin-bottom: 2rem; /* Espacio debajo del subtítulo */
+  font-weight: normal; /* Peso de fuente normal */
+  font-size: 20px; /* Tamaño moderado */
+  font-family: 'Times New Roman';
+}
+
+/* Contenedor de los botones */
+.botones {
+  display: flex; /* Flexbox para alinear botones */
+  justify-content: center; /* Centra horizontalmente */
+  gap: 1rem; /* Espacio entre botones */
+}
+
+/* Estilo base de los botones */
+.boton {
+  background-color: #ffffff; /* Rosa claro de fondo */
+  border: 2px solid #cfcfcf; /* Borde color vino */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 10px 24px; /* Espaciado interior (vertical y horizontal) */
+  cursor: pointer; /* Cambia el cursor al pasar el mouse */
+  font-size: 1rem; /* Tamaño del texto */
+  color: #000000; /* Texto color vino */
+  font-weight: 600; /* Fuente seminegrita */
+  transition: background-color 0.3s ease; /* Transición suave al hacer hover */
+  display: flex; /* Flex para alinear el ícono y texto */
+  align-items: center; /* Centra verticalmente los elementos dentro */
+  gap: 6px; /* Espacio entre ícono y texto */
+}
+
+/* Estilo al pasar el mouse por encima del botón */
+.boton:hover {
+  background-color: #628ecb; /* Fondo más claro al hacer hover */
+  border: 2px solid #0c64df; /* Borde color vino */
+  color: #ffffff;
+  transform: scale(1.10); /* Aumenta el tamaño en un 5% */
+}
+
+

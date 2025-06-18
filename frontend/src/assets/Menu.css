@@ -1,0 +1,98 @@
+.menu-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  font-family: sans-serif;
+  background-color: white;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-top: 0; /* Elimina o ajusta cualquier margen extra */
+}
+
+.logo {
+  height: 60px;
+  margin-left: 10px;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.bar {
+  width: 30px;
+  height: 4px;
+  background-color: rgb(255, 255, 255);
+  margin: 3px 0;
+}
+
+.menu {
+  background-color: #b0b0b0;
+  width: 220px;
+  padding: 10px;
+  position: fixed;
+  top: 56px;
+  right: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Elimina el subrayado de los enlaces dentro del menú */
+.menu a {
+  text-decoration: none;
+  border: none;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  padding: 8px;
+  background-color: #b0b0b0;
+  margin-bottom: 5px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.menu li:hover {
+  background-color: #727272;
+  transform: scale(1.10); /* Aumenta el tamaño en un 5% */
+}
+
+.menu li.active {
+  background-color: #fcfcfc;
+  color: rgb(0, 0, 0);
+}
+
+.submenu {
+  background-color: #ffffff;
+  margin-top: 5px;
+  margin-left: 15px;
+  color: rgb(0, 0, 0);
+}
+
+.submenu li {
+  background-color: #a0a0a0;
+  margin: 3px 0;
+}
+
+/* Estado de hover */
+.hamburger:hover {
+  background-color: #a0a0a0; /* Fondo más claro al hacer hover */
+  transform: scale(1.10); /* Aumenta el tamaño en un 5% */
+}
+
+/* Estado presionado */
+.hamburger.pressed {
+  background-color: #b0b0b0; /* Fondo más oscuro cuando se presiona */
+}
