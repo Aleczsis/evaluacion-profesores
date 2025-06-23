@@ -1,5 +1,3 @@
-// backend/controllers/alumno/loginController.js
-
 const { findUserByMatricula } = require('../../models/alumno/usuarioModels');
 
 async function loginAlumno(req, res) {
@@ -7,13 +5,17 @@ async function loginAlumno(req, res) {
     const { matricula, contraseña } = req.body;
 
     if (!matricula || !contraseña) {
-      return res.status(400).json({ error: 'Faltan matrícula o contraseña' });
+      return res.status(400).json({ error: 'Falta matrícula o contraseña' });
     }
 
     const usuario = await findUserByMatricula(matricula);
 
     if (!usuario) {
       return res.status(401).json({ error: 'Usuario no encontrado' });
+    }
+
+    if (usuario.rol !== 'alumno') {
+      return res.status(403).json({ error: 'Acceso denegado: no es un alumno' });
     }
 
     if (contraseña !== usuario.contraseña) {
@@ -23,12 +25,11 @@ async function loginAlumno(req, res) {
     res.json({
       message: 'Login exitoso',
       usuario: {
-        id: usuario.id,
+        id: usuario.id_usuario,
         matricula: usuario.matricula,
         rol: usuario.rol
       }
     });
-
   } catch (error) {
     console.error('Error en login:', error);
     res.status(500).json({ error: 'Error interno del servidor' });
