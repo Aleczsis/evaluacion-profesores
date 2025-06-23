@@ -16,7 +16,7 @@
           <a href="/recuperar">¿Has olvidado tu contraseña?</a>
           <button @click="login">Ingresar</button>
 
-          <p v-if="error" class="error">{{ error }}</p>
+          <MensajesError v-if="error" :mensaje="error" @cerrar="error = ''" />
         </div>
       </div>
     </main>
@@ -31,9 +31,13 @@
 import axios from 'axios'
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
+import MensajesError from '@/components/MensajesError.vue'  // Importamos el componente de error
 
 export default {
   name: 'LoginAlumno',
+  components: {
+    MensajesError  // Registramos el componente
+  },
   setup() {
     const matricula = ref('')
     const contraseña = ref('')
