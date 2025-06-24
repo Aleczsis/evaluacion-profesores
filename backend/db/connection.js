@@ -1,10 +1,9 @@
-// backend/db/connection.js
 const mysql = require('mysql2/promise');
 
 const pool = mysql.createPool({
-  host: 'localhost',
-  user: 'root',
-  password: 'Ana_123@2025',  // Cambia aquí tu contraseña
+  host: '100.106.39.85',     // IP del servidor remoto
+  user: 'usuario',           // Usuario MySQL remoto
+  password: '148647',        // Contraseña del usuario
   database: 'evaluacion_docente',
   waitForConnections: true,
   connectionLimit: 10,
@@ -12,3 +11,4 @@ const pool = mysql.createPool({
 });
 
 module.exports = pool;
+
